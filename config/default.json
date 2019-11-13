@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://react:Alfonso2019@devconnector-idjwm.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "3a349b3e74f719647e00",
+  "githubSecret": "d8e571fd0af1fa7d408884dc467805364d71739c"
+}
