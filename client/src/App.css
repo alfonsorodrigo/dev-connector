@@ -1,7 +1,19 @@
 /* Global Styles */
+
+@font-face {
+  font-family: MonserratRegular;
+  src: url(assets/Montserrat-Regular.ttf);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: MonserratBold;
+  src: url(assets/Montserrat-Bold.ttf);
+}
+
 :root {
-  --primary-color: #17a2b8;
-  --dark-color: #343a40;
+  --primary-color: #6d5ed2;
+  --dark-color: linear-gradient(90deg, #00dcb8, #6d5ed2);
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
   --success-color: #28a745;
@@ -14,13 +26,19 @@
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "MonserratRegular";
   font-size: 1rem;
   line-height: 1.6;
   background-color: #fff;
   color: #333;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "MonserratBold";
+}
 a {
   color: var(--primary-color);
   text-decoration: none;
@@ -42,6 +60,10 @@ img {
   padding: 0 2rem;
   margin-top: 6rem;
   margin-bottom: 3rem;
+}
+
+.container p#bottom-text-form {
+  text-align: center;
 }
 
 /* Text Styles*/
@@ -162,6 +184,7 @@ img {
 .alert-primary {
   background: var(--primary-color);
   color: #fff;
+  border-radius: 5px;
 }
 
 .btn-light,
@@ -170,6 +193,7 @@ img {
 .alert-light {
   background: var(--light-color);
   color: #333;
+  border-radius: 5px;
 }
 
 .btn-dark,
@@ -186,6 +210,7 @@ img {
 .alert-danger {
   background: var(--danger-color);
   color: #fff;
+  border-radius: 5px;
 }
 
 .btn-success,
@@ -239,6 +264,12 @@ img {
   margin: 1.2rem 0;
 }
 
+.form input[type="submit"] {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
 .form .form-text {
   display: block;
   margin-top: 0.3rem;
@@ -256,6 +287,8 @@ img {
   padding: 0.4rem;
   font-size: 1.2rem;
   border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
 }
 
 .form input[type="submit"],
@@ -321,9 +354,14 @@ button {
   padding: 0.45rem;
   margin: 0 0.25rem;
 }
+.navbar h1 img {
+  position: absolute;
+  width: 150px;
+  margin-top: -37px;
+}
 
 .navbar a:hover {
-  color: var(--primary-color);
+  color: #071e50;
 }
 
 .navbar .welcome span {
@@ -333,7 +371,7 @@ button {
 /* Landing Page */
 .landing {
   position: relative;
-  background: url("./img/showcase.jpg") no-repeat center center/cover;
+  background: url("./img/data.jpg") no-repeat center center/cover;
   height: 100vh;
 }
 
@@ -509,6 +547,7 @@ button {
 
   .lead {
     font-size: 1rem;
+    text-align: center;
   }
 
   /* Navbar */

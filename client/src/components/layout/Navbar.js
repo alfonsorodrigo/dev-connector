@@ -39,8 +39,14 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   );
   return (
     <nav className="navbar bg-dark">
-      <h1>
+      <h1 id="text-logo">
         <Link to="/">
+          {/*
+          <img
+            src="https://konfio.mx/tips/wp-content/uploads/2017/03/konfio-SD.png"
+            alt="logo"
+          />
+          */}
           <i className="fas fa-code"></i> DevConnector
         </Link>
       </h1>
