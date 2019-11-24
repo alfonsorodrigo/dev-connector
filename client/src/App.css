@@ -66,6 +66,14 @@ img {
   text-align: center;
 }
 
+.container > h1 {
+  text-align: center;
+}
+
+.container > p.lead {
+  text-align: center;
+}
+
 /* Text Styles*/
 .x-large {
   font-size: 4rem;
@@ -202,6 +210,7 @@ img {
 .alert-dark {
   background: var(--dark-color);
   color: #fff;
+  border-radius: 5px;
 }
 
 .btn-danger,
