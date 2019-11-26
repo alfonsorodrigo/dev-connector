@@ -1,13 +1,13 @@
-import React, { Fragment, useState } from "react";
-import { Link, Redirect } from "react-router-dom";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-import { login } from "../../actions/auth";
+import React, { Fragment, useState } from 'react';
+import { Link, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { login } from '../../actions/auth';
 
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
-    email: "",
-    password: ""
+    email: '',
+    password: ''
   });
 
   const { email, password } = formData;
@@ -21,42 +21,56 @@ const Login = ({ login, isAuthenticated }) => {
   };
 
   if (isAuthenticated) {
-    return <Redirect to="/dashboard" />;
+    return <Redirect to='/dashboard' />;
   }
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Sign In</h1>
-      <p className="lead">
-        <i className="fas fa-user"></i> Sign Into Your Account
-      </p>
-      <form className="form" onSubmit={e => onSubmit(e)}>
-        <div className="form-group">
-          <input
-            type="email"
-            placeholder="Email Address"
-            name="email"
-            value={email}
-            onChange={e => onChange(e)}
-            required
-          />
+      <div className='container-login'>
+        <div className='ctn-form'>
+          <h1 id='title-login' className='large text-primary'>
+            Sign In
+          </h1>
+          <p className='lead' style={{ textAlign: 'center' }}>
+            <i className='fas fa-user'></i> Sign Into Your Account
+          </p>
+          <form className='form' onSubmit={e => onSubmit(e)}>
+            <div className='form-group'>
+              <input
+                type='email'
+                placeholder='Email Address'
+                name='email'
+                value={email}
+                onChange={e => onChange(e)}
+                required
+              />
+            </div>
+            <div className='form-group'>
+              <input
+                type='password'
+                placeholder='Password'
+                name='password'
+                minLength='6'
+                value={password}
+                onChange={e => onChange(e)}
+                required
+              />
+            </div>
+            <input type='submit' className='btn btn-primary' value='Login' />
+          </form>
+          <p id='bottom-text-form' className='my-1'>
+            Don't have an account? <Link to='/register'>Sign Up</Link>
+          </p>
         </div>
-        <div className="form-group">
-          <input
-            type="password"
-            placeholder="Password"
-            name="password"
-            minLength="6"
-            value={password}
-            onChange={e => onChange(e)}
-            required
-          />
+        <div className='ctn-text'>
+          <div className='capa'></div>
+          <h1 className='title-description'>DevConnector</h1>
+          <p className='text-description'>
+            Small social network app built with the MERN stack. This is part of
+            my "MERN Stack Front To Back" Udemy course.
+          </p>
         </div>
-        <input type="submit" className="btn btn-primary" value="Login" />
-      </form>
-      <p id="bottom-text-form" className="my-1">
-        Don't have an account? <Link to="/register">Sign Up</Link>
-      </p>
+      </div>
     </Fragment>
   );
 };

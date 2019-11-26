@@ -26,7 +26,7 @@
 }
 
 body {
-  font-family: "MonserratRegular";
+  font-family: 'MonserratRegular';
   font-size: 1rem;
   line-height: 1.6;
   background-color: #fff;
@@ -38,7 +38,7 @@ h3,
 h4,
 h5,
 strong {
-  font-family: "MonserratBold";
+  font-family: 'MonserratBold';
 }
 a {
   color: var(--primary-color);
@@ -62,6 +62,12 @@ img {
   margin-top: 6rem;
   margin-bottom: 3rem;
 }
+.container-login {
+  margin-top: 70px;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+}
 
 .container p#bottom-text-form {
   text-align: center;
@@ -75,6 +81,47 @@ img {
   text-align: center;
 }
 
+.ctn-form {
+  width: 100%;
+  padding: 40px;
+  background: #f7f7f7;
+}
+
+.ctn-text {
+  width: 100%;
+  background-image: url(./img/data.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 40px;
+  position: relative;
+}
+.capa {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #00dcb8, #6d5ed2);
+  opacity: 0.8;
+}
+
+.title-description {
+  position: relative;
+  top: 80px;
+  color: white;
+  font-weight: 300;
+  font-size: 40px;
+  text-align: center;
+}
+
+.text-description {
+  position: relative;
+  top: 110px;
+  color: white;
+  font-size: 18px;
+  font-weight: 200;
+  text-align: justify;
+}
 /* Text Styles*/
 .x-large {
   font-size: 4rem;
@@ -274,7 +321,7 @@ img {
   margin: 1.2rem 0;
 }
 
-.form input[type="submit"] {
+.form input[type='submit'] {
   display: block;
   width: 100%;
   margin: auto;
@@ -286,10 +333,10 @@ img {
   color: #888;
 }
 
-.form input[type="text"],
-.form input[type="email"],
-.form input[type="password"],
-.form input[type="date"],
+.form input[type='text'],
+.form input[type='email'],
+.form input[type='password'],
+.form input[type='date'],
 .form select,
 .form textarea {
   display: block;
@@ -301,7 +348,7 @@ img {
   outline: none;
 }
 
-.form input[type="submit"],
+.form input[type='submit'],
 button {
   font: inherit;
 }
@@ -381,7 +428,7 @@ button {
 /* Landing Page */
 .landing {
   position: relative;
-  background: url("./img/data.jpg") no-repeat center center/cover;
+  background: url('./img/data.jpg') no-repeat center center/cover;
   height: 100vh;
 }
 
@@ -412,10 +459,10 @@ button {
 .profile-grid {
   display: grid;
   grid-template-areas:
-    "top top"
-    "about about"
-    "exp edu"
-    "github github";
+    'top top'
+    'about about'
+    'exp edu'
+    'github github';
   grid-gap: 1rem;
 }
 
@@ -599,11 +646,11 @@ button {
 
   .profile-grid {
     grid-template-areas:
-      "top"
-      "about"
-      "exp"
-      "edu"
-      "github";
+      'top'
+      'about'
+      'exp'
+      'edu'
+      'github';
   }
 
   .profile-about .skills {
@@ -622,5 +669,21 @@ button {
   .post a,
   .post button {
     padding: 0.3rem 0.4rem;
+  }
+}
+
+#title-login {
+  text-align: center;
+}
+/* RESPONSIVE */
+
+@media screen and (max-width: 800px) {
+  .ctn-text {
+    display: none;
+  }
+  .ctn-form  {
+    margin: auto;
+    width: 100%;
+    background: white;
   }
 }
